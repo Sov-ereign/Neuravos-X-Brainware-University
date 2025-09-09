@@ -1,0 +1,82 @@
+{
+  "title": "Brainware University – Anti-Ragging Handbook (2024–25)",
+  "definition_of_ragging": [
+    "Teasing, treating or handling with rudeness a fresher/student",
+    "Rowdy or indiscipline activities causing or likely to cause annoyance, hardship, psychological harm or fear",
+    "Asking students to perform acts they would not ordinarily do, causing shame or embarrassment",
+    "Any act of financial extortion, assault, sexual abuse, harassment, bullying, or disruption of academics"
+  ],
+  "summary": "Ragging = physical, mental, emotional, financial, or sexual harassment of any student.",
+  "legal_provisions": [
+    "UGC Regulations on Curbing the Menace of Ragging in Higher Educational Institutions, 2009",
+    "West Bengal Prohibition of Ragging in Educational Institutions Act, 2000",
+    "Punishments include imprisonment, fines, suspension, expulsion"
+  ],
+  "prohibited_conduct": [
+    "Verbal abuse, threats, offensive comments",
+    "Forcing degrading/embarrassing activities",
+    "Physical assault or forcing intoxicants/substances",
+    "Preventing students from attending classes",
+    "Bullying in hostels, classrooms, transport",
+    "Online ragging (cyber bullying, social media harassment)"
+  ],
+  "institutional_mechanisms": {
+    "anti_ragging_committee": {
+      "name": "Anti-Ragging Committee (ARC)",
+      "chair": "Head of Institution",
+      "members": ["Senior faculty", "Administrators", "Local police/civil society reps"],
+      "function": "Monitoring and policy-making for ragging cases"
+    },
+    "anti_ragging_squad": {
+      "name": "Anti-Ragging Squad (ARS)",
+      "function": "Surprise checks in hostels/canteens/classrooms; immediate action on reports"
+    },
+    "mentoring_cell": {
+      "name": "Mentoring Cell",
+      "composition": ["Senior students", "Faculty"],
+      "role": "Mentor juniors; build trust; ensure fresher safety"
+    }
+  },
+  "student_declarations": {
+    "affidavit_required": true,
+    "who_submits": ["Student", "Parent/Guardian"],
+    "notes": "Signed anti-ragging affidavits submitted at admission time"
+  },
+  "disciplinary_actions": [
+    "Suspension from classes",
+    "Debarring from exams/assessments",
+    "Withholding results",
+    "Expulsion from hostel",
+    "Cancellation of admission",
+    "Rustication from university",
+    "Fine up to ₹25,000",
+    "FIR/lawsuit & imprisonment for severe cases"
+  ],
+  "helplines_reporting": {
+    "ugc_helpline": "1800-180-5522",
+    "email": "helpline@antiragging.in",
+    "university_contacts": "See Anti-Ragging Cell annexure in handbook",
+    "anonymous_allowed": true
+  },
+  "preventive_measures": [
+    "Orientation programs for freshers",
+    "Regular counseling and interactive sessions",
+    "Posters & notices across campus & hostels",
+    "Faculty vigilance and hostel wardens’ checks"
+  ],
+  "student_responsibilities": [
+    "Report ragging immediately",
+    "Do not ignore incidents",
+    "Support victims",
+    "Respect zero-tolerance policy"
+  ],
+  "faq_examples": [
+    "What is ragging?",
+    "What punishments exist for ragging?",
+    "Where can I report ragging?",
+    "What’s the helpline number?",
+    "Who handles ragging cases inside the university?"
+  ]
+}
+
+

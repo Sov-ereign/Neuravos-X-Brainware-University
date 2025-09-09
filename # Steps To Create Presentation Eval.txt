@@ -1,0 +1,284 @@
+# Steps To Create Presentation Evaluator
+
+
+# Step - 1 - Installing python, install the version below only
+🔗 Download Python 3.10.11 (Windows Installer)
+https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe
+
+# Step -2- Runcmd with administrator
+then check python version
+python --version
+then
+mkdir Desktop\PresentationEvaluator
+cd Desktop\PresentationEvaluator
+
+
+next Create a New Virtual Environment
+run -  python -m venv venv
+venv\Scripts\activate
+
+now update pip 
+python.exe -m pip install --upgrade pip
+
+then 
+ now install dependencies
+pip install flask streamlit opencv-python mediapipe deepface librosa matplotlib numpy scipy pydub requests
+ 
+
+# Step 3 - verify installation
+python -c "import mediapipe; print('mediapipe installed successfully!')"
+If you see "mediapipe installed successfully!", everything is working fine! ✅
+
+
+
+
+
+
+# Step 4 - initialize GitHub(skip this now since the hackathon hasn't began)
+when the hackathon starts we will do
+
+git init
+git add .
+git commit -m "Initial commit after hackathon start"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
+
+
+instead we will do that locally
+
+so run
+mkdir frontend backend models utils deployment
+echo. > frontend/app.py
+echo. > backend/app.py
+echo. > README.md
+
+now run notepad frontend/app.py and same for backend one and type all code in it
+
+after that run to run the program
+start python backend/app.py && start streamlit run frontend/app.py
+
+
+
+
+
+
+
+
+
+
+
+
+step x
+set cuda 11.8 for the terminal if its not there check with
+
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+
+if not then
+
+set CUDA_HOME="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8"
+set PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin";%PATH%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import numpy as np
+from backend.models.body_language import extract_body_language
+
+
+# **Thresholds for Analysis**
+HEAD_STABILITY_THRESHOLD = 0.06  
+BODY_STABILITY_THRESHOLD = 0.06  
+HAND_GESTURE_MIN = 0.02  
+HAND_GESTURE_MAX = 0.38  
+HAND_SHAKE_THRESHOLD = 0.025  
+
+def analyze_body_language(video_path):
+    extracted_data, total_frames = extract_body_language(video_path)
+    
+    if total_frames == 0:
+        return {
+            "confidence_score": "N/A",
+            "strengths": [],
+            "problems_detected": ["❌ No valid frames detected."],
+            "keys_to_improve": ["❌ Ensure the video captures the presenter."]
+        }
+
+    # **Tracking Counts**
+    stable_posture_count = 0
+    excessive_movement_count = 0
+    controlled_gesture_count = 0
+    fluid_gesture_count = 0  
+    no_hand_movement_count = 0  
+
+    reasoning_set = set()  
+    improvement_set = set()  
+    strength_set = set()  
+
+    for frame_data in extracted_data:
+        nose_movement = frame_data["nose_movement"]
+        body_movement = frame_data["body_movement"]
+        hand_movement = frame_data["hand_movement"]
+        hand_speed = frame_data["hand_speed"]
+
+        # ✅ **Posture Analysis**
+        if nose_movement < HEAD_STABILITY_THRESHOLD and body_movement < BODY_STABILITY_THRESHOLD:
+            stable_posture_count += 1
+            strength_set.add("✅ Maintained a strong and steady posture.")
+        elif body_movement > BODY_STABILITY_THRESHOLD * 1.5:
+            excessive_movement_count += 1
+            reasoning_set.add("⚠️ Some instability in posture, try to reduce movement.")
+            improvement_set.add("✔ Maintain a straight posture and minimize unnecessary movements.")
+
+        # ✅ **Hand Gesture Analysis**
+        if HAND_GESTURE_MIN < hand_movement < HAND_GESTURE_MAX:
+            controlled_gesture_count += 1
+            if hand_speed < HAND_SHAKE_THRESHOLD:  
+                fluid_gesture_count += 1  
+                strength_set.add("✅ Smooth and natural hand gestures used effectively.")
+            else:
+                reasoning_set.add("⚠️ Some hand movements were too fast or shaky.")
+                improvement_set.add("✔ Ensure hand gestures are smooth and controlled.")
+
+        elif hand_movement < HAND_GESTURE_MIN:  
+            no_hand_movement_count += 1  
+            reasoning_set.add("⚠️ Too few hand movements detected. This can make the presentation seem stiff.")
+            improvement_set.add("✔ Use natural hand gestures to emphasize points and improve engagement.")
+
+    # ✅ **Final Confidence Calculation**
+    confidence_score = (stable_posture_count / total_frames) * 55  
+    gesture_factor = (fluid_gesture_count / total_frames) * 45  
+    movement_penalty = (excessive_movement_count / total_frames) * 10  
+    stiffness_penalty = (no_hand_movement_count / total_frames) * 10  
+
+    final_score = max(0, min(100, confidence_score + gesture_factor - movement_penalty - stiffness_penalty))
+
+    # ✅ **Prevent Contradictions**
+    if "⚠️ Too few hand movements detected. This can make the presentation seem stiff." in reasoning_set and \
+       "⚠️ Some hand movements were too fast or shaky." in reasoning_set:
+        reasoning_set.remove("⚠️ Too few hand movements detected. This can make the presentation seem stiff.")
+
+    # ✅ **Final Structured Feedback**
+    return {
+        "confidence_score": f"{int(final_score)}/100",
+        "strengths": list(strength_set) if strength_set else ["✅ No major strengths detected."],
+        "problems_detected": list(reasoning_set) if reasoning_set else ["✅ No major issues detected!"],
+        "keys_to_improve": list(improvement_set) if improvement_set else ["✅ No major improvements needed, great job!"]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import cv2
+import mediapipe as mp
+
+# Initialize MediaPipe Pose model
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose(min_tracking_confidence=0.5, min_detection_confidence=0.5)
+
+def extract_body_language(video_path):
+    cap = cv2.VideoCapture(video_path)
+    total_frames = 0
+    extracted_data = []
+
+    prev_landmarks = None
+    prev_hand_speed = 0  
+
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break  
+
+        total_frames += 1
+
+
+
+        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        results = pose.process(frame_rgb)
+
+        if results.pose_landmarks:
+            landmarks = results.pose_landmarks.landmark
+
+            # Body Part Tracking
+            nose_x = landmarks[mp_pose.PoseLandmark.NOSE].x
+            left_shoulder_y = landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER].y
+            right_shoulder_y = landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER].y
+            left_wrist_x = landmarks[mp_pose.PoseLandmark.LEFT_WRIST].x
+            right_wrist_x = landmarks[mp_pose.PoseLandmark.RIGHT_WRIST].x
+
+            # Feature Extraction
+            nose_movement = abs(nose_x - (prev_landmarks[mp_pose.PoseLandmark.NOSE].x if prev_landmarks else 0))
+            body_movement = abs(left_shoulder_y - right_shoulder_y)
+            hand_movement = abs(left_wrist_x - right_wrist_x)
+            hand_speed = abs(hand_movement - prev_hand_speed)
+
+            prev_hand_speed = hand_movement
+            prev_landmarks = landmarks
+
+            extracted_data.append({
+                "nose_movement": nose_movement,
+                "body_movement": body_movement,
+                "hand_movement": hand_movement,
+                "hand_speed": hand_speed
+            })
+
+    cap.release()
+    return extracted_data, total_frames
+
+
+
+
+
+
+

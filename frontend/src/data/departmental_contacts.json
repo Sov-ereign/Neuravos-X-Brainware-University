@@ -1,0 +1,48 @@
+{
+  "title": "Departmental Contacts & HODs",
+  "note": "Sample list; full directory on department pages and communication directory.",
+  "departments": [
+    {
+      "name": "Computer Science & Engineering",
+      "hod": {
+        "name": "Prof. Avijit K. Chaudhuri",
+        "email": null,
+        "phone": null
+      }
+    },
+    {
+      "name": "Management",
+      "hod": {
+        "name": "Prof. Saileswar Ghosh",
+        "email": "hod.management@brainwareuniversity.ac.in",
+        "phone": "+91-9883034987"
+      }
+    },
+    {
+      "name": "Mathematics",
+      "hod": {
+        "name": "Mr. Surath Roy",
+        "email": "hod.math@brainwareuniversity.ac.in",
+        "phone": "+91-9433505994"
+      }
+    },
+    {
+      "name": "Law",
+      "hod": {
+        "name": "Prof. Kaushik Banerjee",
+        "email": null,
+        "phone": null
+      }
+    },
+    {
+      "name": "Food & Nutrition",
+      "hod": {
+        "name": "Dr. Laavanya Das",
+        "email": "hod.fnt@brainwareuniversity.ac.in",
+        "phone": "+91-8981016819"
+      }
+    }
+  ]
+}
+
+

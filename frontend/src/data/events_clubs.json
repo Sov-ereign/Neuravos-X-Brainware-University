@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "name": "Freshers' Welcome Party",
+      "type": "Cultural",
+      "description": "Annual welcome event with performances and festivities"
+    },
+    {
+      "name": "Annual Fest",
+      "type": "Cultural/Technical",
+      "description": "University cultural and tech festival"
+    },
+    {
+      "name": "Phire Dekha",
+      "type": "Alumni Reunion",
+      "description": "Alumni reunion event"
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Photoframe",
+      "type": "Photography Club",
+      "activities": ["photo walks", "showcases"]
+    },
+    {
+      "name": "Deep Focus",
+      "type": "Cinematography Club",
+      "activities": ["short films", "workshops"]
+    },
+    {
+      "name": "Communication Club",
+      "type": "Oratory/Debate",
+      "activities": ["contests", "events"]
+    },
+    {
+      "name": "Tech Club",
+      "type": "Technology",
+      "activities": ["hackathons", "coding contests", "tech fests"]
+    },
+    {
+      "name": "Media & Cultural Societies",
+      "type": "Cultural",
+      "activities": ["music", "dance", "quizzing", "literature"]
+    }
+  ],
+  "sports": {
+    "facilities": ["cricket", "football", "volleyball", "basketball", "badminton", "swimming"],
+    "notes": ["inter-house competitions", "indoor sports facilities", "hostel recreation rooms and gym"]
+  }
+}
+
+

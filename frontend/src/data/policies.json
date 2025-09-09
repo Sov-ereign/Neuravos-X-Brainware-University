@@ -1,0 +1,104 @@
+{
+  "academic_rules": {
+    "attendance_requirement_percent": 75,
+    "leave_policy": {
+      "application": "Written application to HOD/Dean in advance",
+      "medical_leave": "Medical certificate required"
+    },
+    "exams": [
+      "Carry admit card and ID card",
+      "Follow seating plan",
+      "Malpractice invites disciplinary action"
+    ],
+    "assignments_projects": {
+      "deadlines_strict": true,
+      "late_submission": "Not accepted without valid reasons"
+    }
+  },
+  "code_of_conduct": {
+    "discipline": "Respectful behavior with faculty, staff, and peers",
+    "dress_code": "Decent attire; lab coats/uniforms where applicable",
+    "prohibited": [
+      "Ragging",
+      "Smoking",
+      "Alcohol",
+      "Drugs",
+      "Gambling",
+      "Weapons",
+      "Political activities"
+    ],
+    "id_card": "Must be worn at all times on campus"
+  },
+  "hostel_rules": {
+    "curfew_window": "20:00–22:00 depending on hostel",
+    "visitors": "Parents/guardians only during fixed hours",
+    "leave": "Approved by Warden with parental permission",
+    "prohibited": [
+      "Alcohol",
+      "Drugs",
+      "Smoking",
+      "Loud music",
+      "Unauthorized electrical appliances"
+    ]
+  },
+  "cafeteria_facilities": {
+    "cafeteria": "Open throughout the day with set timings for meals",
+    "library": [
+      "Maintain silence",
+      "Return books on time",
+      "Carry ID for borrowing"
+    ],
+    "medical": [
+      "On-campus clinic with doctor/nurse",
+      "First-aid",
+      "24×7 emergency vehicle"
+    ]
+  },
+  "transport": {
+    "service": "Buses/shuttles on fixed routes with designated boarding points",
+    "requirements": ["Carry transport card", "Follow bus discipline"]
+  },
+  "anti_ragging_safety": {
+    "policy": "Zero tolerance to ragging",
+    "committees": ["Anti-Ragging Committee", "Anti-Ragging Squad", "Grievance Cell"],
+    "emergency_contacts": ["University helplines", "National anti-ragging helpline"],
+    "sops": ["Fire evacuation rules", "First-aid procedures", "Lost & found protocols"]
+  },
+  "fees_payments": {
+    "rules": ["Pay by due dates", "Late fines apply"],
+    "methods": ["Student Portal", "UPI", "Net Banking", "Demand Draft", "Cash", "Debit/Credit card"]
+  },
+  "forms_applications": {
+    "available_at": ["Admin", "Registrar"],
+    "list": [
+      "Bonafide certificate",
+      "Transcript/Migration certificate",
+      "Duplicate ID card/mark sheet",
+      "Hostel leave application"
+    ],
+    "downloadable": true
+  },
+  "student_support": {
+    "offices": [
+      "Dean of Students’ Welfare",
+      "Placement Cell",
+      "IT Support Desk",
+      "Counseling Cell"
+    ],
+    "services": [
+      "Grievances and counseling",
+      "Internships and placements",
+      "Wi‑Fi, LMS, email support",
+      "Psychological support and mentoring"
+    ]
+  },
+  "disciplinary_actions": [
+    "Warning/counseling",
+    "Fines",
+    "Suspension (classes/hostel)",
+    "Debarring from exams",
+    "Expulsion"
+  ]
+}
+
+

@@ -1,0 +1,24 @@
+{
+  "title": "Hostel Rules, Curfew & Leave (2024–25)",
+  "curfew": {
+    "weekday_return_by": "20:00",
+    "doors_locked": "22:00",
+    "attendance_check_window": "20:00–21:00"
+  },
+  "outing_policy": {
+    "weekday_outing": "Allowed once after classes; return by 20:00 and sign-in",
+    "special_permissions": [
+      "Staying during breaks",
+      "Leaving after hours"
+    ]
+  },
+  "leave_policy": {
+    "daytime_leave_during_class_hours": "Prior approval required",
+    "overnight_leave": "Leave form + parental and warden permission",
+    "process": "Fill leave form with hostel warden"
+  },
+  "attendance_requirement": "75% attendance is mandatory",
+  "discipline_note": "Violation of attendance/leave rules may lead to disciplinary action"
+}
+
+

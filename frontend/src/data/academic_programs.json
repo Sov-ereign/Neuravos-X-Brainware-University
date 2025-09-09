@@ -1,0 +1,100 @@
+{
+  "schools": [
+    {
+      "name": "Engineering",
+      "programs": [
+        {
+          "level": "UG",
+          "degree": "B.Tech CSE",
+          "specializations": ["AI/ML", "Data Science", "Cyber Security", "Robotics & AI"],
+          "duration_years": 4,
+          "eligibility": "50% in 10+2 with PCM"
+        },
+        {
+          "level": "PG",
+          "degree": "M.Tech",
+          "specializations": ["CSE", "Data Science"]
+        }
+      ]
+    },
+    {
+      "name": "Computational & Applied Sciences",
+      "programs": [
+        {"level": "UG", "degree": "BCA"},
+        {"level": "UG", "degree": "B.Sc", "specializations": ["Networking & Cyber Security"]},
+        {"level": "PG", "degree": "MCA"},
+        {"level": "PG", "degree": "M.Sc", "specializations": ["Networking", "Cyber Security", "Mathematics"]}
+      ]
+    },
+    {
+      "name": "Biotechnology & Biosciences",
+      "programs": [
+        {"level": "UG", "degree": "B.Tech Biotech"},
+        {"level": "UG", "degree": "B.Sc", "specializations": ["Biotechnology", "Bioinformatics"]},
+        {"level": "PG", "degree": "M.Sc", "specializations": ["Biotechnology", "Bioinformatics"]}
+      ]
+    },
+    {
+      "name": "Medical & Allied Health Sciences",
+      "programs": [
+        {"level": "UG", "degree": "B.Pharm"},
+        {"level": "UG", "degree": "B.Sc", "specializations": ["Optometry", "Physiotherapy", "Nursing", "Medical Lab Technology"]},
+        {"level": "Diploma", "degree": "GNM"},
+        {"level": "Diploma", "degree": "D.Pharm"},
+        {"level": "Diploma", "degree": "D.MLT"},
+        {"level": "PG", "degree": "M.Sc/M.Pharm"}
+      ]
+    },
+    {
+      "name": "Law",
+      "programs": [
+        {"level": "UG", "degree": "B.A. LL.B", "duration_years": 5},
+        {"level": "UG", "degree": "B.B.A. LL.B", "duration_years": 5},
+        {"level": "UG", "degree": "LLB", "duration_years": 3},
+        {"level": "PG", "degree": "LLM"}
+      ]
+    },
+    {
+      "name": "Management & Commerce",
+      "programs": [
+        {"level": "UG", "degree": "BBA", "specializations": ["Analytics", "Finance", "Marketing"]},
+        {"level": "UG", "degree": "B.Com"},
+        {"level": "PG", "degree": "MBA", "specializations": ["Healthcare/Hospital Management"]},
+        {"level": "PG", "degree": "M.Com"}
+      ]
+    },
+    {
+      "name": "Agriculture",
+      "programs": [
+        {"level": "UG", "degree": "B.Sc Agriculture"},
+        {"level": "PG", "degree": "M.Sc Agricultural Sciences", "specializations": ["Agronomy", "Soil Science"]}
+      ]
+    },
+    {
+      "name": "Communication, Multimedia & Film Studies",
+      "programs": [
+        {"level": "UG", "degree": "B.Sc Animation & Multimedia"},
+        {"level": "PG", "degree": "M.Sc", "specializations": ["Film", "Journalism"]}
+      ]
+    },
+    {
+      "name": "Humanities & Social Sciences",
+      "programs": [
+        {"level": "UG", "degree": "B.A.", "specializations": ["English", "Psychology"]},
+        {"level": "PG", "degree": "M.A.", "specializations": ["English", "Psychology"]}
+      ]
+    }
+  ],
+  "doctorate_programs": [
+    "Engineering (CSE, ECE)",
+    "Basic Sciences (Mathematics, Computer Science, Biotechnology)",
+    "Management",
+    "Commerce",
+    "Hospital Management",
+    "Pharmaceutical Sciences",
+    "Law",
+    "English"
+  ]
+}
+
+

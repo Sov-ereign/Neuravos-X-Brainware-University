@@ -1,0 +1,37 @@
+{
+  "title": "Brainware University – Holiday List 2025 (Students)",
+  "single_day_holidays": [
+    {"date": "2025-01-01", "day": "Wednesday", "name": "New Year’s Day"},
+    {"date": "2025-01-23", "day": "Thursday", "name": "Netaji’s Birthday"},
+    {"date": "2025-01-26", "day": "Sunday", "name": "Republic Day"},
+    {"date": "2025-02-02", "day": "Sunday", "name": "Saraswati Puja (Vasant Panchami)"},
+    {"date": "2025-03-14", "day": "Friday", "name": "Dol Jatra / Holi"},
+    {"date": "2025-03-31", "day": "Monday", "name": "Id-Ul-Fitr"},
+    {"date": "2025-04-18", "day": "Friday", "name": "Good Friday"},
+    {"date": "2025-06-07", "day": "Saturday", "name": "Id-Ud-Zoha (Bakrid)"},
+    {"date": "2025-07-06", "day": "Sunday", "name": "Muharram"},
+    {"date": "2025-08-15", "day": "Friday", "name": "Independence Day"},
+    {"date": "2025-10-02", "day": "Thursday", "name": "Gandhi’s Birthday"},
+    {"date": "2025-12-25", "day": "Thursday", "name": "Christmas Day"}
+  ],
+  "multi_day_holidays": [
+    {
+      "name": "Durga Puja period (Sasthi to Lakshmi Puja)",
+      "start_date": "2025-09-28",
+      "end_date": "2025-10-06",
+      "start_day": "Sunday",
+      "end_day": "Monday",
+      "days_count": 9
+    },
+    {
+      "name": "Diwali celebrations (Deepabali to Bhatriditwia)",
+      "start_date": "2025-10-20",
+      "end_date": "2025-10-23",
+      "start_day": "Monday",
+      "end_day": "Thursday",
+      "days_count": 4
+    }
+  ]
+}
+
+

@@ -1,0 +1,49 @@
+{
+  "offices": [
+    {
+      "name": "Admissions Office",
+      "responsibilities": ["applications", "counseling", "scholarships", "fee queries"],
+      "contacts": ["+91-33-69010566", "+91-7003162601"]
+    },
+    {
+      "name": "Examination Department (Exam Cell)",
+      "responsibilities": ["exam scheduling", "results", "mark sheets"],
+      "contacts": ["+91-33-69010530"]
+    },
+    {
+      "name": "Hostel Administration",
+      "responsibilities": ["accommodation", "maintenance", "discipline"],
+      "contacts": [
+        "Boys Hostel: +91-33-69010593",
+        "Girls Hostel: +91-33-69010594"
+      ]
+    },
+    {
+      "name": "Training & Placement Cell",
+      "responsibilities": ["internships", "placements", "campus drives"],
+      "contacts": ["+91-33-69010569", "+91-33-69010570"]
+    },
+    {
+      "name": "Information/IT Cell",
+      "responsibilities": ["campus portal support", "technical assistance"],
+      "contacts": ["+91-33-69010532"]
+    },
+    {
+      "name": "Student Welfare Office",
+      "responsibilities": [
+        "student grievances",
+        "counseling",
+        "extracurricular development",
+        "ombudsperson access"
+      ],
+      "contacts": []
+    },
+    {
+      "name": "Student Services Centre",
+      "responsibilities": ["academic records", "fee payments", "administrative queries"],
+      "contacts": []
+    }
+  ]
+}
+
+

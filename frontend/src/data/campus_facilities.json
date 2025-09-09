@@ -1,0 +1,51 @@
+{
+  "campus": {
+    "size_acres": 28,
+    "environment": ["green", "tech-enabled"],
+    "connectivity": ["High-speed fiber", "24x7 Wi-Fi (1 Gbps)"]
+  },
+  "library": {
+    "description": "Central library with print/digital collections, national/international journals"
+  },
+  "venues": {
+    "seminar_halls": {"count": "several", "capacity_each": 150},
+    "auditorium": {"capacity": 400}
+  },
+  "laboratories": [
+    "Cisco networking lab",
+    "RedHat networking lab",
+    "Electronics and telecom labs",
+    "Biotechnology and chemistry labs",
+    "Engineering workshops",
+    "Language lab"
+  ],
+  "classrooms": {
+    "ict_enabled": true,
+    "features": ["projectors", "smart boards", "CCTV"]
+  },
+  "sports_recreation": {
+    "facilities": [
+      "Cricket ground",
+      "Football ground",
+      "Volleyball court",
+      "Basketball court",
+      "Swimming pool",
+      "Gymnasium"
+    ],
+    "activities": ["inter-department meets", "fitness activities"]
+  },
+  "hostels_dining": {
+    "hostels": ["boys", "girls"],
+    "security": ["24x7 CCTV", "anti-ragging monitored"],
+    "dining": ["dining halls", "food court", "cafés", "canteen"]
+  },
+  "amenities_services": [
+    "ATM kiosks",
+    "Medical clinic (doctor and nurse)",
+    "Counseling center",
+    "Legal-aid clinic",
+    "Student helpline"
+  ]
+}
+
+

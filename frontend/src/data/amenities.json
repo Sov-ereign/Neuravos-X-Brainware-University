@@ -1,0 +1,25 @@
+{
+  "canteen": {
+    "name": "Food Court & Canteen",
+    "hours": {
+      "typical": "08:00–20:00 (Mon–Sat)",
+      "note": "Breakfast through dinner;"
+    },
+    "offerings": ["Indian meals", "snacks", "beverages"]
+  },
+  "healthcare": {
+    "on_campus": {
+      "physician_chamber": true,
+      "sick_room": true,
+      "services": ["first aid", "treatment of minor ailments"],
+      "cost": "free"
+    },
+    "emergency": {
+      "transfer_to_hospital": true,
+      "parent_notification": true,
+      "emergency_car": "24/7 available"
+    }
+  }
+}
+
+

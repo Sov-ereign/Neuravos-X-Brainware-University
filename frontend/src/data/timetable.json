@@ -1,0 +1,222 @@
+{
+  "semester": "3",
+  "section": "J",
+  "program": "B.Tech CSE",
+  "classTimings": {
+    "1st Period": "8:00 – 9:00",
+    "2nd Period": "9:00 – 10:00",
+    "3rd Period": "10:00 – 11:00",
+    "4th Period": "11:00 – 12:00",
+    "5th Period": "12:00 – 1:00",
+    "6th Period": "1:00 – 2:00",
+    "7th Period": "2:00 – 3:00",
+    "8th Period": "3:00 – 4:00",
+    "9th Period": "4:00 – 5:00",
+    "10th Period": "5:00 – 6:00",
+    "11th Period": "6:00 – 7:00"
+  },
+  "weeklySchedule": {
+    "Monday": [
+      {
+        "time": "8:00 – 10:00",
+        "subject": "Python Programming Lab",
+        "code": "BES09013",
+        "instructor": "Ms. Ria Pyne, Ms. Arundhati Roy",
+        "room": "Room 101, Rabindra Bhavan (UB-V)"
+      },
+      {
+        "time": "10:00 – 11:00",
+        "subject": "Computer Organization & Architecture",
+        "code": "BTS30101",
+        "instructor": "Dr. Daizy Deb",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "11:00 – 1:00",
+        "subject": "Constitution of India",
+        "code": "BAU00001",
+        "instructor": "Mr. Sk. Noor Mahammad",
+        "room": "Room 006, Rabindra Bhavan (UB-V)"
+      }
+    ],
+    "Tuesday": [
+      {
+        "time": "9:00 – 11:00",
+        "subject": "Probability & Statistics",
+        "code": "BBS00014",
+        "instructor": "Ms. Rittika Bhattacharya",
+        "room": "Room 014, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "11:00 – 12:00",
+        "subject": "Database Management Systems",
+        "code": "BTS30102",
+        "instructor": "Ms. Pubali Maiti",
+        "room": "Room 014, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "12:00 – 1:00",
+        "subject": "Python Programming",
+        "code": "BES00007",
+        "instructor": "Ms. Ria Pyne",
+        "room": "Room 003, Prafulla Bhavan (UB-III)"
+      },
+      {
+        "time": "1:00 – 2:00",
+        "subject": "Computer Organization & Architecture",
+        "code": "BTS30101",
+        "instructor": "Dr. Daizy Deb",
+        "room": "Room 003, Prafulla Bhavan (UB-III)"
+      }
+    ],
+    "Wednesday": [
+      {
+        "time": "8:00 – 10:00",
+        "subject": "Python Programming",
+        "code": "BES00007",
+        "instructor": "Ms. Ria Pyne",
+        "room": "Room 011, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "10:00 – 11:00",
+        "subject": "Database Management Systems",
+        "code": "BTS30102",
+        "instructor": "Ms. Pubali Maiti",
+        "room": "Room 014, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "11:00 – 12:00",
+        "subject": "Computer Organization & Architecture",
+        "code": "BTS30101",
+        "instructor": "Dr. Daizy Deb",
+        "room": "Room 014, Rammohan Bhavan (UB-VI)"
+      }
+    ],
+    "Thursday": [
+      {
+        "time": "9:00 – 10:00",
+        "subject": "Probability & Statistics",
+        "code": "BBS00014",
+        "instructor": "Ms. Rittika Bhattacharya",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "10:00 – 11:00",
+        "subject": "Python Programming",
+        "code": "BES00007",
+        "instructor": "Ms. Ria Pyne",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "11:00 – 12:00",
+        "subject": "Computer Organization & Architecture",
+        "code": "BTS30101",
+        "instructor": "Dr. Daizy Deb",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "12:00 – 1:00",
+        "subject": "Database Management Systems",
+        "code": "BTS30102",
+        "instructor": "Ms. Pubali Maiti",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      }
+    ],
+    "Friday": [
+      {
+        "time": "9:00 – 10:00",
+        "subject": "Probability & Statistics",
+        "code": "BBS00014",
+        "instructor": "Ms. Rittika Bhattacharya",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "10:00 – 11:00",
+        "subject": "Python Programming",
+        "code": "BES00007",
+        "instructor": "Ms. Ria Pyne",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "11:00 – 12:00",
+        "subject": "Computer Organization & Architecture",
+        "code": "BTS30101",
+        "instructor": "Dr. Daizy Deb",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "12:00 – 2:00",
+        "subject": "COA Lab",
+        "code": "BTS39103",
+        "instructor": "Ms. Piyali De, Ms. Sonu Rana",
+        "room": "Room 005, Rabindra Bhavan (UB-V)"
+      }
+    ],
+    "Saturday": [
+      {
+        "time": "8:00 – 10:00",
+        "subject": "Database Management Systems",
+        "code": "BTS30102",
+        "instructor": "Ms. Pubali Maiti",
+        "room": "Room 009, Rammohan Bhavan (UB-VI)"
+      },
+      {
+        "time": "10:00 – 12:00",
+        "subject": "DBMS Lab",
+        "code": "BTS39104",
+        "instructor": "Ms. Pubali Maiti, Dr. Sanjay Kumar Sen",
+        "room": "Room 004, Rabindra Bhavan (UB-V)"
+      }
+    ]
+  },
+  "subjects": [
+    {
+      "name": "Python Programming",
+      "code": "BES00007",
+      "instructor": "Ms. Ria Pyne",
+      "type": "Theory"
+    },
+    {
+      "name": "Python Programming Lab",
+      "code": "BES09013",
+      "instructor": "Ms. Ria Pyne, Ms. Arundhati Roy",
+      "type": "Lab"
+    },
+    {
+      "name": "Computer Organization & Architecture",
+      "code": "BTS30101",
+      "instructor": "Dr. Daizy Deb",
+      "type": "Theory"
+    },
+    {
+      "name": "COA Lab",
+      "code": "BTS39103",
+      "instructor": "Ms. Piyali De, Ms. Sonu Rana",
+      "type": "Lab"
+    },
+    {
+      "name": "Database Management Systems",
+      "code": "BTS30102",
+      "instructor": "Ms. Pubali Maiti",
+      "type": "Theory"
+    },
+    {
+      "name": "DBMS Lab",
+      "code": "BTS39104",
+      "instructor": "Ms. Pubali Maiti, Dr. Sanjay Kumar Sen",
+      "type": "Lab"
+    },
+    {
+      "name": "Probability & Statistics",
+      "code": "BBS00014",
+      "instructor": "Ms. Rittika Bhattacharya",
+      "type": "Theory"
+    },
+    {
+      "name": "Constitution of India",
+      "code": "BAU00001",
+      "instructor": "Mr. Sk. Noor Mahammad",
+      "type": "Theory"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Brainware University",
+  "type": "Private State University",
+  "location": {
+    "city": "Barasat",
+    "near": "Kolkata",
+    "state": "West Bengal",
+    "country": "India"
+  },
+  "established": {
+    "year": 2016,
+    "act": "Brainware University Act (West Bengal Act XXXI of 2015)",
+    "effective": "February 2016"
+  },
+  "recognitions": {
+    "ugc": {
+      "section": "2(f)",
+      "degree_awarding": "Section 22"
+    },
+    "memberships": ["AIU", "ACU"],
+    "approvals": [
+      "PCI (Pharmacy)",
+      "BCI (Law)",
+      "INC (Nursing)"
+    ],
+    "research_status": "DSIR-SIRO"
+  },
+  "students": 19000,
+  "faculty": 250,
+  "website": "https://www.brainwareuniversity.ac.in"
+}
+
+

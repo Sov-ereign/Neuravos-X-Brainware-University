@@ -1,0 +1,60 @@
+{
+  "program": "B.Tech in Computer Science & Engineering",
+  "total_course_fees": 489600,
+  "scholarship_medha_britti": 50000,
+  "total_payable_after_scholarship": 439600,
+  "early_bird_offer": null,
+  "yearly_semester_breakdown": [
+    {
+      "year": 1,
+      "semesters": [
+        {"semester": 1, "amount": 73200, "due": "At or before admission"},
+        {"semester": 2, "amount": 71200, "due": "By 2025-01-31"}
+      ],
+      "total": 144400
+    },
+    {
+      "year": 2,
+      "semesters": [
+        {"semester": 3, "amount": 65200, "due": "By 2025-07-31"},
+        {"semester": 4, "amount": 65200, "due": "By 2026-01-31"}
+      ],
+      "total": 130400
+    },
+    {
+      "year": 3,
+      "semesters": [
+        {"semester": 5, "amount": 59200, "due": "By 2026-07-31"},
+        {"semester": 6, "amount": 59200, "due": "By 2027-01-31"}
+      ],
+      "total": 118400
+    },
+    {
+      "year": 4,
+      "semesters": [
+        {"semester": 7, "amount": 46400, "due": "By 2027-07-31"},
+        {"semester": 8, "amount": 0, "due": null}
+      ],
+      "total": 46400
+    }
+  ],
+  "notes": {
+    "late_fine_per_day": 70,
+    "fine_includes": ["Sundays", "Holidays"],
+    "payment_methods": [
+      "Demand Draft (Brainware University, payable at Kolkata)",
+      "Net Banking",
+      "BHIM/UPI",
+      "PayTM",
+      "Student Portal",
+      "Cash",
+      "Debit/Credit Cards",
+      "Cheques only at admission time"
+    ],
+    "sports_scholarship_krira_ratna": "Valid documents required every semester",
+    "payment_queries_contact": ["+91 33 7144 5571", "+91 33 7144 5572"],
+    "reference_id": "0aa8a716-9f65-4169-8c8c-b5e4ca6"
+  }
+}
+
+
