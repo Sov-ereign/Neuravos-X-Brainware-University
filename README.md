@@ -17,8 +17,8 @@ PresentationEvaluator is a comprehensive AI-powered platform that analyzes prese
 ## 🎬 Demo
 
 <div align="center">
-  <a href="#" target="_blank">
-    <img src="https://img.shields.io/badge/🎥_Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=FF0000" alt="https://www.linkedin.com/posts/sov-ereign_nexathon2024-ai-machinelearning-activity-7371639148597743616-8H27?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJgqL4Blt08GWuJ9AdUx5iQUQUE3O2mDc4" />
+  <a href="https://www.linkedin.com/posts/sov-ereign_nexathon2024-ai-machinelearning-activity-7371639148597743616-8H27?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJgqL4Blt08GWuJ9AdUx5iQUQUE3O2mDc4" target="_blank">
+    <img src="https://img.shields.io/badge/🎥_Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=FF0000" alt="Demo Video" />
   </a>
 </div>
 
