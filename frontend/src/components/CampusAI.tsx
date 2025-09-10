@@ -33,7 +33,7 @@ const CampusAI: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/chat', {
+      const response = await axios.post('https://neuravos-x-brainware-university.onrender.com//chat', {
         message: trimmed
       }, {
         timeout: 30000

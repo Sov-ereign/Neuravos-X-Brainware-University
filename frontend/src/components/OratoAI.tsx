@@ -53,7 +53,7 @@ const OratoAI: React.FC = () => {
       const formData = new FormData();
       formData.append('video', selectedFile);
 
-      const response = await axios.post('http://127.0.0.1:5000/analyze', formData, {
+      const response = await axios.post('https://neuravos-x-brainware-university.onrender.com//analyze', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -92,7 +92,7 @@ const OratoAI: React.FC = () => {
       } else if (err.response?.data?.error) {
         setError(err.response.data.error);
       } else if (err.code === 'ERR_NETWORK') {
-        setError('Could not connect to the analysis server. Please ensure the server is running on http://127.0.0.1:5000');
+        setError('Could not connect to the analysis server. Please ensure the server is running on https://neuravos-x-brainware-university.onrender.com');
       } else {
         setError('An unexpected error occurred during analysis. Please try again.');
       }
