@@ -9,6 +9,7 @@ import logoSvg from '../assests/bwu-logo.svg';
 import ScamDetector from './components/scam_test';
 import ScamStats from './components/scam_stats';
 import { ScamProvider } from './contexts/ScamContext';
+import WelcomeModal from './components/WelcomeModal';
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function App() {
   return (
     <ScamProvider>
       <div className="min-h-screen bg-white">
+        <WelcomeModal />
         {/* Banner above navbar */}
         <div className="w-full">
           <div className="flex w-full h-20 sm:h-24 md:h-28 relative">
@@ -60,9 +62,9 @@ function App() {
         <footer className="bg-[#000F20]">
           <div className="container mx-auto px-3 sm:px-6 py-6 sm:py-8">
             <div className="text-center">
-              <p className="text-white/90 text-xs sm:text-sm">
-                © Team Apexars -- Neuravos X Brainware University
-              </p>
+                  <p className="text-white/90 text-xs sm:text-sm">
+                    © Team Apexars -- Neuravos X Brainware University
+                  </p>
             </div>
           </div>
         </footer>

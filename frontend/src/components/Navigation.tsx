@@ -12,8 +12,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
   
   const navItems = [
     { id: 'orato-ai', label: 'Orato-AI', icon: BarChart3 },
+    { id: 'dashboard', label: 'Orato-Stats', icon: Home },
     { id: 'campus-ai', label: 'Campus-AI', icon: GraduationCap },
-    { id: 'dashboard', label: 'Dashboard', icon: Home },
     { id: 'scam-detector', label: 'Scam Detector', icon: ShieldAlert },
     { id: 'scam-stats', label: 'Scam Stats', icon: PieChart },
     { id: 'about', label: 'About', icon: Info },
