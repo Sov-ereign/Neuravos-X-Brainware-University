@@ -45,6 +45,7 @@ imageio-ffmpeg==0.6.0
 importlib_metadata==8.7.0
 itsdangerous==2.2.0
 jax==0.4.30
+jaxlib==0.4.30
 Jinja2==3.1.6
 joblib==1.4.2
 json-tricks==3.17.3
