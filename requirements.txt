@@ -152,7 +152,8 @@ torch==2.6.0; sys_platform != "win32"
 torchaudio==2.6.0+cu118; sys_platform == "win32"
 torchaudio==2.6.0; sys_platform != "win32"
 torchvision==0.21.0+cu118; sys_platform == "win32"
-torchvision==0.21.0; sys_platform != "win32"tornado==6.4.2
+torchvision==0.21.0; sys_platform != "win32"
+tornado==6.4.2
 tqdm==4.67.1
 typing_extensions==4.13.0
 tzdata==2025.1
