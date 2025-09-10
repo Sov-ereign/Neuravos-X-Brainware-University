@@ -147,7 +147,8 @@ tf-keras==2.15.0
 threadpoolctl==3.6.0
 toml==0.10.2
 toolz==1.0.0
-torch==2.6.0+cu118
+torch==2.6.0+cu118; sys_platform == "win32"
+torch==2.6.0; sys_platform != "win32"
 torchaudio==2.6.0+cu118
 torchvision==0.21.0+cu118
 tornado==6.4.2
