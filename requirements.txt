@@ -111,7 +111,7 @@ PySocks==1.7.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
 pytz==2025.1
-pywin32==311
+pywin32==311; sys_platform == "win32"
 PyYAML==6.0.2
 referencing==0.36.2
 requests==2.32.3
