@@ -20,18 +20,18 @@ function App() {
       <div className="min-h-screen bg-white">
         {/* Banner above navbar */}
         <div className="w-full">
-          <div className="flex w-full h-24 md:h-28 relative">
+          <div className="flex w-full h-20 sm:h-24 md:h-28 relative">
             {/* Left blue panel */}
-            <div className="relative flex items-center bg-[#003399] text-white w-[50%] md:w-[42%] px-6">
-              <div className="flex items-center gap-4">
-                <img src={logoSvg} alt="Brainware University" className="h-20 md:h-12 w-auto" />
+            <div className="relative flex items-center bg-[#003399] text-white w-[60%] sm:w-[50%] md:w-[42%] px-3 sm:px-6">
+              <div className="flex items-center gap-2 sm:gap-4">
+                <img src={logoSvg} alt="Brainware University" className="h-12 sm:h-16 md:h-12 w-auto" />
                 <div className="hidden sm:block leading-tight">
-                  <div className="text-sm md:text-base font-semibold uppercase tracking-wide">Brainware University X Neuravos</div>
-                  <div className="text-[10px] md:text-xs opacity-90">We Make Careers</div>
+                  <div className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wide">Brainware University X Neuravos</div>
+                  <div className="text-[8px] sm:text-[10px] md:text-xs opacity-90">We Make Careers</div>
                 </div>
               </div>
               {/* Angled white divider */}
-              <div className="absolute top-0 -right-6 h-full w-8 bg-white transform skew-x-12" />
+              <div className="absolute top-0 -right-3 sm:-right-6 h-full w-4 sm:w-8 bg-white transform skew-x-12" />
             </div>
 
             {/* Right campus image */}
@@ -43,7 +43,7 @@ function App() {
 
         <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
         
-        <div className="container mx-auto px-6 py-10 max-w-7xl">
+        <div className="container mx-auto px-3 sm:px-6 py-6 sm:py-10 max-w-7xl">
           <Routes>
             <Route path="/" element={<OratoAI />} />
             <Route path="/orato-ai" element={<OratoAI />} />
@@ -58,9 +58,9 @@ function App() {
         
         {/* Footer */}
         <footer className="bg-[#000F20]">
-          <div className="container mx-auto px-6 py-8">
+          <div className="container mx-auto px-3 sm:px-6 py-6 sm:py-8">
             <div className="text-center">
-              <p className="text-white/90 text-sm">
+              <p className="text-white/90 text-xs sm:text-sm">
                 © Team Apexars -- Neuravos X Brainware University
               </p>
             </div>

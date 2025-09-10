@@ -54,17 +54,17 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-8 sm:space-y-12">
       {/* Hero Section */}
-      <div className="text-center py-12 bg-gradient-to-br from-[#003399] to-[#1e40af] text-white rounded-2xl">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex items-center justify-center mb-4">
-            <Award className="w-8 h-8 mr-3" />
-            <span className="text-lg font-semibold">Nexathon 2025</span>
+      <div className="text-center py-8 sm:py-12 bg-gradient-to-br from-[#003399] to-[#1e40af] text-white rounded-2xl">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-center mb-3 sm:mb-4">
+            <Award className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3" />
+            <span className="text-sm sm:text-lg font-semibold">Nexathon 2025</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Neuravos X Brainware University</h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-6">Professional Analysis Platform</p>
-          <p className="text-lg text-blue-200 max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">Neuravos X Brainware University</h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-4 sm:mb-6">Professional Analysis Platform</p>
+          <p className="text-sm sm:text-lg text-blue-200 max-w-3xl mx-auto">
             An integrated AI-powered platform combining presentation evaluation, campus assistance, and fraud detection 
             to revolutionize educational and professional development.
           </p>
@@ -74,13 +74,13 @@ const About: React.FC = () => {
       {/* Features Section */}
       <div className="space-y-8">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#003399] mb-4">Our Platform Features</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003399] mb-3 sm:mb-4">Our Platform Features</h2>
+          <p className="text-sm sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Three powerful AI modules working together to provide comprehensive analysis and assistance
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="bg-white border-gray-200 hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
@@ -100,13 +100,13 @@ const About: React.FC = () => {
       {/* Team Section */}
       <div className="space-y-8">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#003399] mb-4">Meet Team Apexars</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003399] mb-3 sm:mb-4">Meet Team Apexars</h2>
+          <p className="text-sm sm:text-lg text-gray-600 max-w-2xl mx-auto">
             A passionate team of developers from Brainware University, building the future of AI-powered education
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {team.map((member, index) => (
             <Card key={index} className="bg-white border-gray-200 hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
@@ -117,7 +117,7 @@ const About: React.FC = () => {
                 <p className="text-sm font-semibold text-gray-600 mb-2">{member.role}</p>
                 <p className="text-sm text-gray-500 leading-relaxed">{member.description}</p>
               </CardHeader>
-              <CardContent className="flex items-center justify-center gap-3">
+              <CardContent className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
                 <Button
                   variant="outline"
                   className="border-[#003399] text-[#003399] hover:bg-[#003399] hover:text-white"
@@ -140,16 +140,16 @@ const About: React.FC = () => {
 
       {/* Mission Section */}
       <Card className="bg-gradient-to-r from-gray-50 to-blue-50 border-gray-200">
-        <CardContent className="py-12">
+        <CardContent className="py-8 sm:py-12">
           <div className="text-center max-w-4xl mx-auto">
-            <Target className="w-16 h-16 mx-auto mb-6 text-[#003399]" />
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003399] mb-6">Our Mission</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <Target className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 text-[#003399]" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003399] mb-4 sm:mb-6">Our Mission</h2>
+            <p className="text-sm sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
               To democratize AI-powered analysis and create intelligent solutions that enhance learning, 
               professional development, and security awareness. We believe in the power of technology 
               to transform education and make advanced AI accessible to everyone.
             </p>
-            <div className="flex items-center justify-center gap-8 text-sm text-gray-600">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Brain className="w-5 h-5 text-[#003399]" />
                 <span>AI-Powered</span>

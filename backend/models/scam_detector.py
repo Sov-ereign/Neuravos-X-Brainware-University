@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify, render_template_string
 import joblib
 import google.generativeai as genai
 import os
+import re
 from pathlib import Path
 
 # Expose as a Blueprint to plug into the main Flask app
@@ -45,13 +46,37 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 gemini_model = genai.GenerativeModel("gemini-1.5-flash")
 
 
+def detect_suspicious_patterns(message: str) -> dict:
+    """Detect suspicious patterns in the message."""
+    patterns = {
+        'has_url': bool(re.search(r'https?://|www\.|\.(com|org|net|io|co|uk|de|fr|it|es|ca|au|jp|cn|in|br|ru|pl|nl|se|no|dk|fi|ch|at|be|cz|hu|ro|bg|hr|sk|si|lt|lv|ee|lu|mt|cy|ie|pt|gr|pl|cz|hu|ro|bg|hr|sk|si|lt|lv|ee|lu|mt|cy|ie|pt|gr)', message.lower())),
+        'has_shortened_url': bool(re.search(r'(bit\.ly|tinyurl|t\.co|goo\.gl|ow\.ly|is\.gd|v\.gd|short\.link|tiny\.cc|shorturl\.at)', message.lower())),
+        'has_phone': bool(re.search(r'(\+?1[-.\s]?)?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}', message)),
+        'has_urgent_language': bool(re.search(r'\b(urgent|immediate|act now|limited time|expires|deadline|final notice|last chance|don\'t miss|hurry|quick|asap|emergency)\b', message.lower())),
+        'has_financial_terms': bool(re.search(r'\b(money|cash|payment|bank|account|credit|debit|card|loan|debt|refund|prize|winner|lottery|jackpot|million|billion|dollar|euro|pound|rupee)\b', message.lower())),
+        'has_suspicious_chars': bool(re.search(r'[^\w\s\.\-\@\:\/]', message)),
+        'is_very_short': len(message.strip()) < 10,
+        'is_very_long': len(message.strip()) > 500
+    }
+    return patterns
+
 def predict_with_gemini(message: str) -> str:
     """Get Gemini's prediction (spam/ham)."""
+    # Check if message contains URLs (common in QR codes)
+    has_url = any(protocol in message.lower() for protocol in ['http://', 'https://', 'www.', '.com', '.org', '.net', '.io'])
+    
     prompt = f"""
-    You are a fraud detection system.
-    Classify this SMS as either 'spam' or 'ham' (ham = safe message).
+    You are a fraud detection system that analyzes messages and URLs for potential scams, phishing, or malicious content.
+    Classify this content as either 'spam' or 'ham' (ham = safe message).
 
-    SMS: "{message}"
+    Content: "{message}"
+    
+    Consider these factors:
+    - If it's a URL, check if it looks suspicious or leads to known malicious sites
+    - Look for urgent language, threats, or requests for personal information
+    - Check for suspicious domains or shortened URLs
+    - Look for common scam patterns like fake offers, lottery wins, or urgent actions
+    
     Answer ONLY 'spam' or 'ham'.
     """
     try:
@@ -128,6 +153,11 @@ def predict_api():
         return jsonify({"error": "No message provided"}), 400
 
     # ----------------------------
+    # Pattern Analysis
+    # ----------------------------
+    patterns = detect_suspicious_patterns(message)
+    
+    # ----------------------------
     # ML Prediction
     # ----------------------------
     try:
@@ -143,18 +173,27 @@ def predict_api():
     gemini_prediction = predict_with_gemini(message)
 
     # ----------------------------
-    # Hybrid Decision Logic
+    # Enhanced Hybrid Decision Logic
     # ----------------------------
     if gemini_prediction == "error" or gemini_prediction == "unknown":
         final_prediction = ml_prediction  # fallback
     elif gemini_prediction == ml_prediction:
         final_prediction = ml_prediction  # agreement → confident
     else:
-        # Conflict → trust Gemini more (can be tuned later)
-        final_prediction = gemini_prediction
+        # Conflict → use pattern analysis to decide
+        suspicious_count = sum(patterns.values())
+        if suspicious_count >= 3:  # Multiple suspicious patterns
+            final_prediction = "spam"
+        elif patterns['has_shortened_url'] or patterns['has_urgent_language']:
+            final_prediction = "spam"  # High-risk patterns
+        else:
+            final_prediction = gemini_prediction  # Trust Gemini for edge cases
 
     return jsonify({
         "ml_prediction": str(ml_prediction),
         "gemini_prediction": str(gemini_prediction),
-        "final_prediction": str(final_prediction)
+        "final_prediction": str(final_prediction),
+        "patterns": patterns,
+        "risk_score": sum(patterns.values()),
+        "content_type": "url" if patterns['has_url'] else "text"
     })
