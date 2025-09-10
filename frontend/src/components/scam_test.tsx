@@ -4,10 +4,16 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./ui/card"
 import { Button } from "./ui/button";
 import { useScamContext } from "../contexts/ScamContext";
 
+interface ScamResult {
+  ml_prediction: string;
+  gemini_prediction: string;
+  final_prediction: string;
+}
+
 export default function Home() {
   const API_URL = `${import.meta.env.VITE_API_BASE_URL || "https://neuravos-x-brainware-university.onrender.com"}/scam/predict`;
   const [message, setMessage] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<ScamResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const { addResult } = useScamContext();
