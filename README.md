@@ -12,20 +12,13 @@
 
 ## *PresentationEvaluator – AI-Powered Presentation Analysis Platform* 
 PresentationEvaluator is a comprehensive AI-powered platform that analyzes presentation videos to provide detailed feedback on body language, speech patterns, confidence levels, and overall presentation quality. It's designed to help presenters improve their skills through intelligent analysis and actionable insights.
-
-### 👤 User Roles 
-
-| Role   | Permissions                                                              |
-|--------|---------------------------------------------------------------------------|
-| Guest  | View demo features and basic analysis                                     |
-| User   | Upload videos, get detailed analysis, view statistics                    |
-| Admin  | Monitor system performance and manage content                            |
+                  |
 
 ## 🎬 Demo
 
 <div align="center">
   <a href="#" target="_blank">
-    <img src="https://img.shields.io/badge/🎥_Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=FF0000" alt="Demo Video" />
+    <img src="https://www.linkedin.com/posts/sov-ereign_nexathon2024-ai-machinelearning-activity-7371639148597743616-8H27?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJgqL4Blt08GWuJ9AdUx5iQUQUE3O2mDc4/🎥_Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=FF0000" alt="Demo Video" />
   </a>
 </div>
 
